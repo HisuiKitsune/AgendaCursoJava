@@ -1,17 +1,23 @@
 package br.com.cursoja.agendacurso.model.entidade;
 
-public class Curso {
+public class Usuario {
+	
 	private long id;
 	private String nome;
-	private double valor;
+	private String login;
+	private String senha;
+	
 	public long getId() {
 		return id;
 	}
 	public String getNome() {
 		return nome;
 	}
-	public double getValor() {
-		return valor;
+	public String getLogin() {
+		return login;
+	}
+	public String getSenha() {
+		return senha;
 	}
 	public void setId(long id) {
 		this.id = id;
@@ -19,10 +25,11 @@ public class Curso {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public void setValor(double valor) {
-		this.valor = valor;
+	public void setLogin(String login) {
+		this.login = login;
 	}
-	
-	
-	
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
 }

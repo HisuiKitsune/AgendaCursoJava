@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
 <%@ page import="br.com.cursoja.agendacurso.controller.ProfessorController" %>
 <%@ page import="br.com.cursoja.agendacurso.model.entidade.Professor" %>  
 <%@ page import="java.util.ArrayList" %>
@@ -16,6 +14,20 @@
 		<button style="padding:5px;"><a style="color:blue;text-decoration:none;" href="index.jsp">Home</a></button>
 		<button style="padding:5px;"><a style="color:green;text-decoration:none;" href="cadastrarprofessor.jsp">Cadastrar Professor</a></button>
 		<br>----<br>
+		
+			<%
+	String nomeBusca = request.getParameter("busca");
+	
+	if (nomeBusca == null){
+		nomeBusca = "";
+	}
+	%>
+		<form method="post" action="listarprofessor.jsp">
+	<p>
+		<input type="text" name="busca" value="<%= nomeBusca %>" />
+		<input type="submit" value="Buscar" />
+	</p>
+		
 	<table>
 		<thead>
 			<th>Nome</th>
@@ -25,8 +37,9 @@
 		</thead>
 		<tbody>
 	<% 
+		System.out.println(nomeBusca);
 		ProfessorController controller = new ProfessorController();
-		ArrayList<Professor> lista = controller.listar("");
+		ArrayList<Professor> lista = controller.listar(nomeBusca);
 		
 		DecimalFormat fmt = new DecimalFormat("###0.00");
 		for (Professor p : lista) {

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Conexao {
 
 	private String caminho = "jdbc:mysql://localhost:3306/cursodb"; //Caminho da base de dados
-	private String usuario = "root"; //Usuário do banco de dados
+	private String usuario = "root"; //UsuÃ¡rio do banco de dados
 	private String senha = ""; //Senha do banco de dados
 
 	private Connection conn;
@@ -20,7 +20,7 @@ public class Conexao {
 			System.out.println("Conectado com sucesso");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
-			System.out.println("Não encontrou o Driver");
+			System.out.println("NÃ£o encontrou o Driver");
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -33,7 +33,7 @@ public class Conexao {
 	public void fecharConexao() {
 		try {
 			conn.close();
-			System.out.println("Conexão fechada");
+			System.out.println("Conexï¿½o fechada");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Deu problema");

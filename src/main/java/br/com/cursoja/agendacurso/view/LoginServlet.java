@@ -6,21 +6,23 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 
-import br.com.cursoja.agendacurso.controller.CursoController;
-import br.com.cursoja.agendacurso.model.entidade.Curso;
+import br.com.cursoja.agendacurso.controller.UsuarioController;
+import br.com.cursoja.agendacurso.model.entidade.Usuario;
 
 /**
- * Servlet implementation class ExcluirCurso
+ * Servlet implementation class LoginServlet
  */
-public class ExcluirCurso extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ExcluirCurso() {
+    public LoginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,32 +32,35 @@ public class ExcluirCurso extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		String strId = request.getParameter("id");
-		long id = 0;
-		try {
-			id = Long.parseLong(strId);
-		} catch(Exception e) {
-			System.out.println("Erro na conversão");
-		}
-		CursoController controller = new CursoController();
-		Curso c = new Curso();
-		c.setId(id);
-		
-		controller.excluir(c);
-		
-		RequestDispatcher rd = request.getRequestDispatcher("listarcurso.jsp");
-		rd.forward(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
-
+		String login = request.getParameter("login");
+		String senha = request.getParameter("senha");
+		
+		System.out.println(login + " - " + senha);
+		
+		UsuarioController controller = new UsuarioController();
+		Usuario user = controller.logar(login, senha);
+		
+		String destino = "";
+		if(user != null) {
+			HttpSession sessao = request.getSession();
+			
+			sessao.setAttribute("usuariologado", user);
+			destino = "area_interna.jsp";
+		} else {
+			request.setAttribute("erro", "Login Inválido");
+			destino = "login.jsp";
+		}
+		
+		RequestDispatcher rd = request.getRequestDispatcher(destino);
+		rd.forward(request, response);
 	}
+
 }

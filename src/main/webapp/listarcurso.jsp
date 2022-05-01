@@ -15,6 +15,20 @@
 		<button style="padding:5px;"><a style="color:blue;text-decoration:none;" href="index.jsp">Home</a></button>
 		<button style="padding:5px;"><a style="color:green;text-decoration:none;" href="cadastrarcurso.jsp">Cadastrar Curso</a></button>
 		<br>----<br>
+		
+	<%
+	String nomeBusca = request.getParameter("busca");
+	
+	if (nomeBusca == null){
+		nomeBusca = "";
+	}
+	%>
+		<form method="post" action="listarcurso.jsp">
+	<p>
+		<input type="text" name="busca" value="<%= nomeBusca %>" />
+		<input type="submit" value="Buscar" />
+	</p>
+	
 	<table>
 		<thead>
 			<th>Nome</th>
@@ -23,9 +37,10 @@
 		</thead>
 		<tbody>
 	<% 
+		System.out.println(nomeBusca);
 		CursoController controller = new CursoController();
-		ArrayList<Curso> lista = controller.listar("");
-		
+		ArrayList<Curso> lista = controller.listar(nomeBusca);
+	
 		DecimalFormat fmt = new DecimalFormat("###0.00");
 		for (Curso c : lista) {
 	%>	
