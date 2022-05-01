@@ -12,17 +12,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Página inicial</title>
+<title>Java Courses</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-	<h2>Cursos Informática</h2>
+<body onload="pulse();">
+
+	<h2><i class="fa-brands fa-java fa-2xl"></i></h2>
 	
-	<button style="padding:5px;"><a style="color:green;text-decoration:none;" href="cadastrarcurso.jsp">Cadastrar Curso</a></button>
-	<button style="padding:5px;"><a style="color:blue;text-decoration:none;" href="listarcurso.jsp">Listar Cursos</a></button>
-	<br><br>
-	<button style="padding:5px;"><a style="color:green;text-decoration:none;" href="cadastrarprofessor.jsp">Cadastrar Professor</a></button>
-	<button style="padding:5px;"><a style="color:blue;text-decoration:none;" href="listarprofessor.jsp">Listar Professores</a></button>
+	<div class="box1">
+	</div>
+		<div class="box2">
+			<i class="fa-solid fa-key fa-xl"></i>
+			<a href="Login.jsp"><button class="adminbutton">Admin Tools</button></a>
+			<p class="curso">Courses</p>
+			<a href="cadastrarcurso.jsp"><button>Register</button></a>
+			<a href="listarcurso.jsp"><button class="lista">List</button></a>
+			<p class="professores">Teachers</p>
+			<a href="cadastrarprofessor.jsp"><button>Register</button></a>
+			<a href="listarprofessor.jsp"><button>List</button></a>
+		</div>
+
 	
+
 	<%
 		//Conexao c = new Conexao();
 		//c.getConexao();

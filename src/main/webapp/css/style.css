@@ -1,0 +1,123 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url("../img/background.png");
+	background-size: cover;
+	background-position: fixed;
+	background-repeat: no-repeat;
+	font-family: impact;
+}
+
+h2{
+	font-size: 48px;
+	color: #F62817;
+	position: absolute;		
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.box1 {
+	width: 400px;
+	height: 500px;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	border-radius: 12px;
+	opacity: 0.8;
+	background-color: #34282C;
+	filter: blur(1px);
+}
+.box2 {
+	width: 400px;
+	height: 500px;
+	top: 51%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+button {
+	margin-bottom:7px;
+	margin-top:10px;
+	width: 60%;
+	top: 30%;
+	left: 20%;
+	text-align: center;
+	position: relative;
+	background-color: #504A4B;
+	border-radius: 12px;
+	padding: 14px;
+	cursor: pointer;
+	border: none;
+	color: #CECECE;
+} 
+
+button.adminbutton {
+	position: absolute;
+	top: 10%;
+}
+button:hover{
+	background-color: #F62817;
+	transition:linear 0.3s;
+	color:black;
+}
+button:not(:hover){
+	transition: linear 0.3s;
+}
+button.lista {
+	margin-bottom: 40px;
+}
+a{
+	color: white;
+	opacity: 1;
+	text-decoration: none;
+}
+p.curso{
+	position: absolute;
+	top:24%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	color: #F62817;
+	font-size: 24px;
+	
+}
+p.professores{
+	position: absolute;
+	top:55%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	color: #F62817;
+	font-size: 24px;
+}
+i.fa-solid {
+	position: absolute;
+	top: 7%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	color: red;
+}
+
+@keyframes blink {
+    0% { box-shadow: rgba(246, 40, 23, 0.25) 0px 60px 100px -12px; }
+    50% { box-shadow: none;}
+    100% { box-shadow: rgba(246, 40, 23, 0.25) 0px 60px 100px -12px; }
+}
+
+@-webkit-keyframes blink {
+    0% { box-shadow: rgba(246, 40, 23, 0.25) 0px 60px 100px -12px; }
+    50% { box-shadow: 0 0 0; }
+    100% { box-shadow: 0 0 15px red; }
+}
+
+.box1 {
+    -webkit-animation: blink 4.0s linear infinite;
+    -moz-animation: blink 4.0s linear infinite;
+    -ms-animation: blink 4.0s linear infinite;
+    -o-animation: blink 4.0s linear infinite;
+    animation: blink 4.0s linear infinite;
+}
+
+
