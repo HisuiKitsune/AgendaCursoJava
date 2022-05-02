@@ -4,7 +4,7 @@ body{
 	background-image: url("../img/background.png");
 	background-size: 100vw 100vh;
 	background-repeat: no-repeat;
-	font-family: sans-serif;
+	font-family: Roboto;
 }
 
 h2{
@@ -25,8 +25,8 @@ h2{
 	transform: translate(-50%, -50%);
 	box-sizing: border-box;
 	border-radius: 12px;
-	opacity: 0.8;
-	background-color: #34282C;
+	opacity: 0.7;
+	background-color: rgba(31,31,31,1);
 	filter: blur(1px);
 }
 .box2 {
@@ -45,36 +45,43 @@ button {
 	top: 30%;
 	left: 20%;
 	text-align: center;
+	text-transform: uppercase;
 	font-family: sans-serif;
 	font-size: 14px;
-	position: relative;
-	background-color: #504A4B;
-	border-radius: 12px;
 	padding: 12px;
 	cursor: pointer;
 	border: none;
-	color: #CECECE;
+	border-radius: 12px;
+	color:#CECECE;
+	background: linear-gradient(309deg, #504A4B 50%, #F62817 50%);
+	position: relative;
 } 
 
 button.adminbutton {
 	position: absolute;
 	top: 10%;
 }
-button:hover{
-	background-color: #F62817;
-	transition:linear 0.3s;
-	color:black;
+button:after{
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background: linear-gradient(309deg, #504A4B 50%, #F62817 50%);
 }
-button:not(:hover){
-	transition: linear 0.3s;
+button, button:after{
+	background-size:300%;
+	background-position:100%;
+	transition: 0.8s;
 }
+
+button:hover, button:hover:after{
+	background-position: 0;
+	color: black;
+}
+
 button.lista {
 	margin-bottom: 40px;
-}
-a{
-	color: white;
-	opacity: 1;
-	text-decoration: none;
 }
 p.curso{
 	position: absolute;

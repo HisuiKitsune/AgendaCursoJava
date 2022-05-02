@@ -11,17 +11,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Java Courses</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /><title>Java Courses</title>
+<script src="jquery-2.1.4.js"></script>
 <link rel="stylesheet" type="text/css" href="./css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body onload="pulse();">
-
-	<h2><i class="fa-brands fa-java fa-2xl"></i></h2>
-	
+		
 	<div class="box1">
 	</div>
+	<h2><i class="fa-brands fa-java fa-2xl"></i></h2>
 		<div class="box2">
 			<i class="fa-solid fa-key fa-xl"></i>
 			<a href="Login.jsp"><button class="adminbutton">Admin Tools</button></a>
@@ -32,8 +31,6 @@
 			<a href="cadastrarprofessor.jsp"><button>Register</button></a>
 			<a href="listarprofessor.jsp"><button>List</button></a>
 		</div>
-
-	
 
 	<%
 		//Conexao c = new Conexao();
