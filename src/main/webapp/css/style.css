@@ -4,7 +4,7 @@ body{
 	background-image: url("../img/background.png");
 	background-size: 100vw 100vh;
 	background-repeat: no-repeat;
-	font-family: Roboto;
+	font-family: 'Montserrat', sans-serif;
 }
 
 h2{
@@ -37,8 +37,7 @@ h2{
 	position: absolute;
 	transform: translate(-50%, -50%);
 }
-
-button {
+button{
 	margin-bottom:7px;
 	margin-top:10px;
 	width: 60%;
@@ -46,7 +45,7 @@ button {
 	left: 20%;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 	padding: 12px;
 	cursor: pointer;
@@ -55,7 +54,11 @@ button {
 	color:#CECECE;
 	background: linear-gradient(309deg, #504A4B 50%, #F62817 50%);
 	position: relative;
-} 
+}
+button a{
+	color:#CECECE;
+	text-decoration: none;
+}
 
 button.adminbutton {
 	position: absolute;
@@ -79,6 +82,10 @@ button:hover, button:hover:after{
 	background-position: 0;
 	color: black;
 }
+button:hover a{
+	color: black;
+	transition: 0.8s;
+} 
 
 button.lista {
 	margin-bottom: 40px;
@@ -94,7 +101,7 @@ p.curso{
 }
 p.professores{
 	position: absolute;
-	top:55%;
+	top:53%;
 	left:50%;
 	transform: translate(-50%, -50%);
 	color: #F62817;
@@ -106,6 +113,17 @@ i.fa-solid {
 	left:50%;
 	transform: translate(-50%, -50%);
 	color: red;
+}
+
+i.fa-brands {
+	margin-top:-200px;
+	display:block;
+}
+
+img{
+	width: 200px;
+	margin-top: 150px;
+	margin-left: 100px;
 }
 
 @keyframes blink {

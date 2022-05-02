@@ -13,23 +13,27 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" /><title>Java Courses</title>
 <script src="jquery-2.1.4.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" type="text/css" href="./css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body onload="pulse();">
 		
-	<div class="box1">
-	</div>
-	<h2><i class="fa-brands fa-java fa-2xl"></i></h2>
+<div class="box1">
+</div>
 		<div class="box2">
+		<h2><i class="fa-brands fa-java fa-2xl"></i></h2>
 			<i class="fa-solid fa-key fa-xl"></i>
-			<a href="Login.jsp"><button class="adminbutton">Admin Tools</button></a>
+			<button class="adminbutton"><a href="Login.jsp">Admin Tools</a></button>
 			<p class="curso">Courses</p>
-			<a href="cadastrarcurso.jsp"><button>Register</button></a>
-			<a href="listarcurso.jsp"><button class="lista">List</button></a>
+			<button><a href="cadastrarcurso.jsp">Register</a></button>
+			<button class="lista"><a href="listarcurso.jsp">List</a></button>
 			<p class="professores">Teachers</p>
-			<a href="cadastrarprofessor.jsp"><button>Register</button></a>
-			<a href="listarprofessor.jsp"><button>List</button></a>
+			<button><a href="cadastrarprofessor.jsp">Register</a></button>
+			<button><a href="listarprofessor.jsp">List</a></button>
+			<img src="./img/logoOracle.png">
 		</div>
 
 	<%
